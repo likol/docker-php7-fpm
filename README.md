@@ -1,5 +1,5 @@
 # Introduction
-Dockerfile to build a PHP7-FPM and Nginx container image.
+Dockerfile to build a Web server , based PHP7-FPM and Nginx .
 
 # Version
 Current Version:
@@ -10,6 +10,7 @@ Current Version:
 
 # Quick Start
 launch the image using the docker command line,
+
 ```docker run --name php7 -p 8080:80 -p 8022:22 -v {$HOME}/html:/var/www/html -d likol1227/php7```
 
 # SSH
