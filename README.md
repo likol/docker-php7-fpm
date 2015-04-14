@@ -1,6 +1,3 @@
-# docker-php7-fpm
-Dockerized php7-fpm with Nginx web server
-
 # Introduction
 Dockerfile to build a PHP7-FPM and Nginx container image.
 
