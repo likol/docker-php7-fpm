@@ -10,6 +10,7 @@ libcurl4-openssl-dev \
 libmcrypt-dev \
 libxml2-dev \
 libjpeg-dev \
+libjpeg62 \
 libfreetype6-dev \
 libmysqlclient-dev \
 libt1-dev \
