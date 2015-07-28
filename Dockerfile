@@ -21,7 +21,7 @@ libpspell-dev \
 libicu-dev \
 librecode-dev
 
-ADD http://repos.zend.com/zend-server/early-access/php7/php-7.0-latest-DEB-x86_64.tar.gz /usr/local/php7
+ADD http://repos.zend.com/zend-server/early-access/php7/php-7.0-beta1-DEB-x86_64.tar.gz /usr/local/php7
 
 RUN tar zxPf /usr/local/php7
 RUN echo 'export PATH="$PATH:/usr/local/php7/bin"' >> /etc/bash.bashrc
