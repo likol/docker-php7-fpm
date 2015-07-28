@@ -37,5 +37,5 @@ RUN chmod 0755 -R /usr/local/php7/bin \
 && chmod 0755 -R /usr/local/php7/sbin
 
 EXPOSE 80
-
+VOLUME ["/var/www/html"]
 CMD ["/sbin/init"]
