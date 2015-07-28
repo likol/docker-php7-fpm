@@ -32,9 +32,15 @@ COPY assets/conf/default /etc/nginx/sites-available/default
 COPY assets/conf/upstart-conf/php7-fpm.conf /etc/init/php7-fpm.conf
 COPY assets/conf/upstart-conf/nginx.conf /etc/init/nginx.conf
 COPY assets/www/index.php /var/www/html/index.php
+COPY assets/php7-upgrade /usr/bin/php7-upgrade
 
 RUN chmod 0755 -R /usr/local/php7/bin \
-&& chmod 0755 -R /usr/local/php7/sbin
+&& chmod 0755 -R /usr/local/php7/sbin \
+&& chmod 0755 /usr/bin/php7-upgrade \
+&& apt-get autoremove -y \
+&& apt-get autoclean \
+&& apt-get clean \
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 80
 VOLUME ["/var/www/html"]

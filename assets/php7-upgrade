@@ -1,0 +1,10 @@
+#!/bin/bash
+fileName=php-7.0-latest-DEB-x86_64.tar.gz
+## Stop php7-fpm first.
+stop php7-fpm
+## Download latest php7
+wget -P /tmp http://repos.zend.com/zend-server/early-access/php7/${fileName}
+## Uncompression and delete archive.
+tar zxPf /tmp/${fileName} && rm -f /tmp/${fileName}
+## Start php7-fpm
+start php7-fpm
