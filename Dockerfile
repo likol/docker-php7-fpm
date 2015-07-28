@@ -4,7 +4,7 @@ MAINTAINER likol@likol.idv.tw
 ENV TERM xterm
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C \
-&& echo "deb http://ppa.launchpad.net/nginx/development/ubuntu trusty main" > /etc/apt/sources.list.d/nginx-development.list
+&& echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu trusty main" > /etc/apt/sources.list.d/nginx-stable.list
 RUN apt-get update \
 && apt-get install -y \
 nginx \
